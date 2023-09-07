@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+    background: linear-gradient(120deg,#4033b5d8,#8957c6da);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+h1{
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 4.5 rem;
+}
+
+.contador{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.text{
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+
+}
+
+.contador-dias,.contador-horas,.contador-minutos,.contador-segundos{
+    text-align: center;
+
+
+}
+.contador-dias,.contador-horas,.contador-minutos,.contador-segundos span{
+    font-size: 1.5rem;
+}
