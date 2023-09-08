@@ -205,7 +205,7 @@ if ($conexao->connect_error) {
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       $usuario = $_POST["nome"];
-      $comentario = $_POST["comentario"];
+      $comentario = htmlspecialchars($_POST["comentario"]);
       $id_gerado = rand(3, 1000);
 
 

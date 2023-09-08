@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <h1>
+    <!--Tela Cronometro -->
+    <h1 id="contagem">
         Contagem regressiva ....
     </h1>
 
@@ -32,6 +33,7 @@
         </div>
     </div>
 
+    <!-- REcebe e Valida as datas -->
     <?php
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -50,6 +52,7 @@
         const horasEl = document.getElementById('horas');
         const minutosEl = document.getElementById('minutos');
         const segundosEl = document.getElementById('segundos');
+        const fraseEl = document.getElementById('contagem');
         let validaDia = document.getElementById('validaDia');
         let validaHoras = document.getElementById('validaHoras');
         let validaMinutos = document.getElementById('validaMinutos');
@@ -73,7 +76,7 @@
                 const minutos = Math.floor((totalSegundos / 60) % 60);
                 const segundos = Math.floor(totalSegundos) % 60;
 
-                //Formata o time se for menor que zero.
+                //Formata o tempo se for menor que zero.
 
                 diasEl.innerHTML = dias;
                 horasEl.innerHTML = formataData(horas);
@@ -81,32 +84,39 @@
                 segundosEl.innerHTML = formataData(segundos);
 
                 //Verifica se o tempo chegou a zero e retira da tela.
-
-                if(dias == 0) {
-                    validaDia.style.display = "none";
+                if (dias == 0) {
+                    
+                    return validaDia.style.display = "none";
+                }else{
+                    return validaDia.style.display = "block";
                 }
-                if(horas == 0) {
-                    validaHora.style.display = "none";
+                if (horas == 0) {
+                    return validaHora.style.display = "none";
+                }else{
+                    return validaHora.style.display = "block";
                 }
-                if(minutos == 0) {
-                    validaMinutos.style.display = "none";
+                if (minutos == 0) {
+                   return  validaMinutos.style.display = "none";
+                }
+                else{
+                   return  validaMinutos.style.display = "block";
+                }
+                
+                if (temporizador == 0) {
+                   return window.location.href = "index.php";
                 }
 
-
-                if(--temporizador < 0) {
+                if (--temporizador < 0) {
                     location.reload();
                 }
-
-                if(temporizador == 0) {
-                    window.alert("Contagem finalizada..................");
-                    window.location.href = 'index.php';
-
-                }
+              
+                
 
 
             }, 1000);
         }
 
+        //Função que formata o tempo se for menor que zero
         function formataData(tempo) {
             return tempo < 10 ? '0' + tempo : tempo;
         }
