@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela Login</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Login</h1>
+        <form action="login.php" method="post">
+            <label for="flogin">Email: </label>
+            <input type="text" id="flogin" name="flogin" placeholder="Digite o seu email..." required>
+
+            <label for="fpassword">Senha: </label>
+            <input type="password" id="fpassword" name="fpassword" placeholder="Digite a sua senha..." required>
+
+            <button type="submit">Logar</button>
+
+            <button type="button" onclick="location.href='cadastro.html'">Fazer cadastro</button>
+        </form>
+    </div>
+</body>
+</html>

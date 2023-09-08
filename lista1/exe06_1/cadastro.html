@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Cadastro</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Cadastro</h1>
+        <form action="cadastro.php" method="post">
+            <label for="fnome">Nome: </label>
+            <input type="text" id="fnome" name="fnome" placeholder="Digite o seu nome..." required>
+            
+            <label for="femail">Email: </label>
+            <input type="text" id="femail" name="femail" placeholder="Digite o seu email..." required>
+
+            <label for="fsenha">Senha: </label>
+            <input type="password" id="fsenha" name="fsenha" placeholder="Digite a sua senha..." required>
+
+            <button type="submit">Cadastrar</button>
+
+            <button type="button" onclick="location.href='login.html'">Fazer login</button>
+        </form>
+    </div>
+</body>
+</html>
