@@ -91,12 +91,6 @@ if ($conexao->connect_error) {
           </div><!-- /.blog-post -->
 
 
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Mais antigos</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Mais novos</a>
-          </nav>
-
-
 
           <form class="was-validated" method="POST">
             <div>
@@ -218,7 +212,7 @@ if ($conexao->connect_error) {
 
 
     <footer class="blog-footer">
-      <p>Template de blog construído para o <a href="https://getbootstrap.com/">Bootstrap</a>, pelo <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p> Blog TECH</p>
       <p>
         <a href="#">Voltar ao topo</a>
       </p>

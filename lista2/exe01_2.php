@@ -1,7 +1,7 @@
 <?php 
 
 $torre1 = array (
-    'numerico'=> 8, 
+    'numerico'=> 9, 
     'letra'=>'A'
 );
 
@@ -10,18 +10,18 @@ $torre2 = array (
     'letra' =>"E"
 );
 
-
+//função verifica se as torres se encontram na mesma coluna ou linha do tabuleiro
 function torreataca(array $t1, array $t2){
    if($t1["numerico"]!=$t2["numerico"]){
     if($t1["letra"]===$t2["letra"]){
-        return "TRUE 1";
+        return "TRUE";
     }
-    return "false";
+    return "FALSE";
    }
 
-   return"TRUE";
+   return "TRUE";
 
 }
 
-echo "TESTE ".torreataca($torre1,$torre2);
+echo torreataca($torre1,$torre2);
 ?>

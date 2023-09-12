@@ -1,6 +1,7 @@
 <?php 
     $lista_nome = ["mavis","senaida","letty","WilhAn","GaBRIEL"];
 
+
     function lista_correta(array $lista){
         foreach($lista as $listar){
             $lista_convertida[]= ucwords(strtolower($listar));
